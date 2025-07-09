@@ -66,7 +66,7 @@ const addToCart = (book) => {
 
 // Funzione per rimuovere un libro dal carrello
 const removeFromCart = (index) => {
-  // Rimuove 1 elemento all'indice specificato
+  // Rimuove 1 elemento all'indice sp   ecificato
   cart.splice(index, 1);
   // Salva il carrello dopo la rimozione
   saveCart();
@@ -109,8 +109,8 @@ const getBookshelf = function () {
         const col = document.createElement("div");
         col.className = "col col-12 col-md-4 col-lg-3";
         col.innerHTML += `
-            <div class="card h-100 position-relative bg-light"> 
-                <img src="${book.img}" class="card-img-top" alt="${book.title}" />
+            <div class="card h-100 position-relative bg-light" > 
+                <img src="${book.img}" class="card-img-top" alt="${book.title}"  />
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">${book.title}</h5>
                     <p class="card-text flex-grow-1"> 
@@ -132,7 +132,7 @@ const getBookshelf = function () {
             // prevengo il comportamento predefinito
             event.preventDefault();
             // risalgo all'elemento card genitore e rimuovilo
-            const cardToRemove = event.target.closest(".card");
+            const cardToRemove = event.target.closest(".col");
             if (cardToRemove) {
               // rimuove la card
               cardToRemove.classList.add("hidden-card");
